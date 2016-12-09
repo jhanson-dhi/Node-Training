@@ -9,8 +9,8 @@ app.get('/users/', function (req, res) {
    res.send ('hello users');
 });
 
-app.get('/users/id', function (req, res) {
-   res.send ('hello user id');
+app.get('/users/:id', function (req, res) {
+   res.send ('hello user id: ' + req.params.id);
 });
 
 app.listen(8081, function() {console.log("we are live.")} );
